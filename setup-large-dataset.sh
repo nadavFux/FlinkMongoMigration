@@ -54,14 +54,6 @@ fi
 
 print_status "All prerequisites found ✓"
 
-# Create project directory structure
-print_status "Creating project directory structure..."
-mkdir -p src/main/java/com/example/flink
-mkdir -p src/main/java/com/example/model
-mkdir -p src/main/resources
-mkdir -p src/test/java
-mkdir -p target
-
 # Check available disk space (in KB)
 if command -v df &> /dev/null; then
     available_space=$(df . | tail -1 | awk '{print $4}')
